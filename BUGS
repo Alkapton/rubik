@@ -1,0 +1,8 @@
+BUGS
+
+Resizing the program when runing in a virtual terminal (eg. xterm) may cause the 
+screen to become corrupted.   If this happens simply resize the terminal again.
+
+Repeated resizing the iterminal can result in abnormal program termination.
+
+Any other errors that may be present.

@@ -1,0 +1,62 @@
+On any version of Linux...
+  $ make
+  $ sudo make install
+________________________________________________________________________________
+
+On any version of Microsoft Windows >= Windows 10...
+
+Make sure you have 'Windows Services for Linux' (wsl) enabled.
+
+This is the 'official' way to install wsl
+
+      1. Open Power Shell in Admin mode.
+      2. Type "dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart"
+      3. Press Enter.
+      4. Type "dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart"
+      5. Press Enter
+      6. Type "wsl.exe --install
+      7. Press Enter    (may take some time, you should end up with a minimal 
+                         version of Ubuntu)
+
+wsl should now be available by entering 'wsl' in the search box on the 
+task bar.
+
+I have just installed wsl on a new Windows 11 pc and the above did not work.  
+This is what did work:
+
+      1. Launch C:\Windows\System\control.exe
+      2. Click on 'Install Applications'
+      3. Click on 'Turn Windows features on \ off'
+      4. Scroll down and check 'Windows Subsystem for Linux'
+      5. Reboot
+      6. Run Power Shell as Administrator
+      7. Type 'wsl --install --distribution Ubuntu install wsl' and press ENTER
+
+If all goes well you will be prompted for your Linux user name and password (This
+should be different to your Windows login).   Now you can install the necessary
+software as described below. 
+________________________________________________________________________________
+
+Install a build enviroment and dependancies:-
+
+(In Windows:- In the search option on the task bar type 'wsl' press enter.)
+
+Install the compiler and Make:-
+
+  $ sudo apt update
+  $ sudo apt upgrade
+  $ sudo apt install -y gcc make
+
+Optionaly install man pages:-
+
+  $ sudo apt install -y manpages-dev apt-file manpages-posix manpages-posix-dev
+
+Install ncurses:-
+
+  $ sudo apt install -y libncurses-dev
+
+Optionally install man pages:-
+
+  $ sudo apt install -y ncurses-doc
+
+Now you can build and install rubik as described above.
