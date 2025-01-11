@@ -17,6 +17,7 @@
 # License along with rubik. If not, see <https://www.gnu.org/
 # licenses/>. 
 #
+*/
 
 #include "rubik.h"
 

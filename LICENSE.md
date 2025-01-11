@@ -621,8 +621,3 @@ copy of the Program in return for a fee.
 
 END OF TERMS AND CONDITIONS
 
----
-
-## Copyright
-
-(c) Copyright 2012-2015 RetroPie Project (See COPYRIGHT.md)
